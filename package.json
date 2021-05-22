@@ -1,0 +1,25 @@
+{
+  "name": "homework-assignment-10",
+  "version": "1.0.0",
+  "description": "team profile generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "test --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/operationBrass/homework-assignment-10.git"
+  },
+  "author": "Brendan Lewis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/operationBrass/homework-assignment-10/issues"
+  },
+  "homepage": "https://github.com/operationBrass/homework-assignment-10#readme",
+  "dependencies": {
+    "inquirer": "^8.1.0"
+  }
+}
