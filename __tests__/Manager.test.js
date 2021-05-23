@@ -1,6 +1,6 @@
 const Manager = require("../lib/Manager");
 
-describe ("Employee Class", () =>
+describe ("Manager Class", () =>
 {
     //test stuff
     test("Return error if no arguments provided for manager", () => {
@@ -11,7 +11,7 @@ describe ("Employee Class", () =>
       expect(() => {new Manager("Brendan",1)}).toThrow();
     });
     test("Return manager object when all argurments provided", () => {
-      //create a mock engineer object to test against the returned object from Employee
+      //create a mock manager object to test against the returned object from Employee
 
       const testManager = {
         name: "Brendan",
