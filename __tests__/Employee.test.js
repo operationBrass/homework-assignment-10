@@ -1,16 +1,15 @@
-const Employee = require("../lib/Employee.js");
+const employee = require("../lib/Employee.js");
 
-require("../lib/Employee.js");
 
 describe ("Employee Class", () =>
 {
     //test stuff
     test("Return error if no arguments provided for employee", () => {
         //actual test
-      expect(new Employee()).toEqual(Error);
+      expect(() => {new employee()}).toThrow();
     });
     test("Return error if atleast one argument is undefined for employee", () => {
-      expect(new Employee("Brendan")).toEqual(Error);
+      expect(() => {new employee("Brendan",1)}).toThrow();
     });
     test("Return employee object when all argurments provided", () => {
       //create a mock employee object to test against the returned object from Employee
@@ -20,6 +19,6 @@ describe ("Employee Class", () =>
         id: 1,
         email: "mr.brn.lewis@gmail.com"
       };
-      expect(new Employee("Brendan",1,"mr.brn.lewis@gmail.com")).toEqual(testEmployee);
+      expect(new employee("Brendan",1,"mr.brn.lewis@gmail.com")).toEqual(testEmployee);
     });
 });
