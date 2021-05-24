@@ -2,17 +2,18 @@
 
 :root{
     
-    --teamBackground: linear-gradient(225deg, rgba(234, 238, 16, 0.65) 24%,rgb(190, 123, 84) 52%);
-    --headingTextColor: rgba(255, 255, 255, 0.8);
+    --teamBackground: rgba(36, 127, 200, 0.342) ;
+    --headingTextColor: rgb(255, 255, 255);
 }
 
 
-.title
+.headerTitle
 {
 
     background: var(--titleBackground);
     color:var(--headingTextColor);
-
+    font-size: 3rem;
+    margin: 0;
 }
 
 html
@@ -26,10 +27,19 @@ body
 margin:0;
 padding:0;
 max-height: 100%;
-background-color: rgba(0, 0, 0, 0.8);
+background-color: rgba(18, 58, 122, 0.8);
 }
 
+a
+{
+color:rgb(103, 241, 23);
+text-decoration: none;
+}
 
+a:hover
+{
+    text-decoration: underline;
+}
 
 .container 
 {
@@ -51,14 +61,11 @@ background-color: rgba(0, 0, 0, 0.8);
     
 }
 
-
 .teamContainer
 {
     display:flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     width:100%;
-   
-   
 }
 
 /*manager card style*/
@@ -70,21 +77,30 @@ background-color: rgba(0, 0, 0, 0.8);
 .manCard,.teamCard
 {
     background: var(--teamBackground);
-    color: rgba(255, 255, 255, 0.685);
+    color: rgba(255, 255, 255, 0.8);
     margin: auto;
     border:darkblue 1px solid;
-    text-align: center;
     font-size: 1.5em;
 }
 
-
-
 .mHeader
 {
-  margin: 0.5em;
+    text-align: center;
+    text-decoration: underline;
 }
 
-h1
+.manCard
 {
-    font-size: 30px;
+    padding:10px;
+}
+
+.teamCard
+{
+    min-width: 200px;
+    padding: 10px;
+}
+
+.footerTitle
+{
+    color:rgb(255, 255, 255);
 }

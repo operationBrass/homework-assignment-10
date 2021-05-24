@@ -162,7 +162,7 @@ function engineerMenu()
 
 function writeReport(fileName, data) {
 
-    const filePath = "./dist";
+    const filePath = "./dist/";
 
     fs.writeFile(filePath + fileName,data,(error) =>{
         if (error)

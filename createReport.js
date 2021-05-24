@@ -8,14 +8,14 @@ const starterHTML = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Team Profile Generator</title>
-    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="stylesheet" href="../Assets/style.css">
 
 </head>
 <body>
 
 <div class="container">
     <header class="header"> 
-        <h1 class="title"> Team Manager </h1>
+        <h1 class="headerTitle"> Team Profile Generator </h1>
     </header>
 
 <div class="teamProfileContainer"> 
@@ -24,7 +24,7 @@ const starterHTML = `<!DOCTYPE html>
 
 const endingHTML = 
 ` </div>
-<footer class="footer"> <h2 class="title"> <i>OperationBrass - Brendan Lewis 2021 </i></h2></footer>
+<footer class="footer"> <h2 class="footerTitle"> <i>OperationBrass - Brendan Lewis 2021 </i></h2> </footer>
 </div>
 </body>
 </html>`
@@ -46,13 +46,12 @@ addManager: function addManager(manager)
 {
     return `<div id="manID" class='manCard'> 
     <h2 class='mHeader'> Team Manager </h2> 
-    <P class='mName'> ${manager.name} </P>
-    <p class="mID"> ${manager.id} </p>
-    <p class="mEmail"> <a href=${manager.email}> Contact Email </a> </p>
-    <p class='mOfficeNum'> ${manager.officeNumber} </p>
+    <P class='mName'> Name: ${manager.name} </P>
+    <p class="mID"> User ID: ${manager.id} </p>
+    <p class="mEmail"><a href=mailto:${manager.email}> ${manager.email} </a> </p>
+    <p class='mOfficeNum'> Office Number: ${manager.officeNumber} </p>
 </div>
 </div>
-    <div class="title"> <h2> Team Members </h2>  </div>
     <div class = "teamContainer">`
 },
 
@@ -62,10 +61,10 @@ addIntern: function addIntern(intern)
   return `
     <div class='teamCard'> 
         <h2 class='mHeader'> Intern </h2> 
-        <P class='tName'> ${intern.name}  </P>
-        <p class="tID"> ${intern.id} </p>
-        <p class="tEmail"> ${intern.email}</p>
-        <p class='tOther'><a href="">  ${intern.school} </a> </p>
+        <P class='tName'>Name: ${intern.name}  </P>
+        <p class="tID"> User ID: ${intern.id} </p>
+        <p class="tEmail"><a href=mailto:${intern.email}> ${intern.email} </a></p>
+        <p class='tOther'>School: ${intern.school} </p>
     </div>`
 
 },
@@ -73,13 +72,13 @@ addIntern: function addIntern(intern)
 addEngineer: function addEngineer(engineer)
 {
 
-return `
+return `    
     <div class='teamCard'> 
         <h2 class='mHeader'> Engineer </h2> 
-        <P class='tName'> ${engineer.name} </P>
-        <p class="tID">${engineer.id}</p>
-        <p class="tEmail">${engineer.email}</p>
-        <p class='tOther'>${engineer.userName}</p>
+        <P class='tName'>Name: ${engineer.name} </P>
+        <p class="tID">User ID: ${engineer.id}</p>
+        <p class="tEmail"><a href=mailto:${engineer.email}> ${engineer.email} </a></p>
+        <p class='tOther'>GitHub: <a href=http://www.github.com/${engineer.userName}> ${engineer.userName} </a></p>
     </div>`
 
 }};
