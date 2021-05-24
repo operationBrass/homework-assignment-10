@@ -7,9 +7,10 @@ const Report = require("./createReport");
 //node imports
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { report } = require("process");
 
 //global varibles
-const objArray = [];
+let htmlReport = '';
 
 // hold list of questions as array of objects
 
@@ -92,10 +93,12 @@ startSeq();
 
 // starting function to kick things off
 function startSeq() {
+    htmlReport += Report.start();
     inquirer.prompt(managerQ)
     .then(answers => 
         {
-            objArray.push(new Manager(answers.name, answers.id, answers.email, answers.officeNum));
+            const newManager = new Manager(answers.name, answers.id, answers.email, answers.officeNum);
+            htmlReport += Report.addManager(newManager);
             subMenu();
         })
     .catch(error => {
@@ -117,8 +120,8 @@ function subMenu()
                 engineerMenu();
                 break;
                 default:
-                Report(answers)
-                console.log(objArray);
+                htmlReport += Report.end();
+                writeReport(htmlReport);
             }
         })
     .catch(error => {
@@ -133,7 +136,8 @@ function internMenu()
 
     .then(answers => 
     {
-        objArray.push(new Intern(answers.name, answers.id, answers.email, answers.school));
+        const newIntern = new Intern(answers.name, answers.id, answers.email, answers.school);
+        htmlReport += Report.addIntern(newIntern);
         subMenu();
     })
     .catch(error => 
@@ -146,7 +150,8 @@ function engineerMenu()
     inquirer.prompt(engineerQ)
     .then(answers => 
         {
-            objArray.push(new Engineer(answers.name, answers.id, answers.email, answers.github));
+            const newEngineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
+            htmlReport += Report.addIntern(newEngineer);
             subMenu();
         })
     .catch(error => {

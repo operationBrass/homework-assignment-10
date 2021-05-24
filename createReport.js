@@ -1,4 +1,5 @@
 let fullHTML = "";
+
 const starterHTML = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,18 +30,19 @@ const endingHTML =
 </html>`
 
 
+module.exports = {
 
-function startReport() 
+start: function startReport() 
 {
     return starterHTML;
-};
+},
 
-function endReport()
+end: function endReport()
 {
     return endingHTML;
-}
+},
 
-function addManager(manager)
+addManager: function addManager(manager)
 {
     return `<div id="manID" class='manCard'> 
     <h2 class='mHeader'> </h2> 
@@ -52,9 +54,9 @@ function addManager(manager)
 </div>
 </div>
     <div class="title"> <h2> Team Members </h2>  </div>`
-}
+},
 
-function addIntern(intern)
+addIntern: function addIntern(intern)
 {
 
   return `<div class = "teamContainer">
@@ -67,9 +69,9 @@ function addIntern(intern)
         <p class='tOther'></p>
     </div>`
 
-}
+},
 
-function addEngineer(engineer)
+addEngineer: function addEngineer(engineer)
 {
 
 return `<div class = "teamContainer">
@@ -82,4 +84,4 @@ return `<div class = "teamContainer">
         <p class='tOther'></p>
     </div>`
 
-}
+}};
