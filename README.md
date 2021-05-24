@@ -28,6 +28,8 @@ CLI application takes in employee information and provides a HTML report of the 
 
 Profile of team members and to bring about all concepts currently learned 
 
+Watch [this](https://drive.google.com/file/d/1YjIeOebSdMBDai1wZEOwzbpNXN3pVGQ-/view)  video to learn more 
+
 
 ## Installation 
 
