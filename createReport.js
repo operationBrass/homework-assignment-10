@@ -7,8 +7,8 @@ const starterHTML = `<!DOCTYPE html>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Weather Forecast</title>
-    <link rel="stylesheet" href="../Assets/style.css">
+    <title>Team Profile Generator</title>
+    <link rel="stylesheet" href="./Assets/style.css">
 
 </head>
 <body>
@@ -45,28 +45,27 @@ end: function endReport()
 addManager: function addManager(manager)
 {
     return `<div id="manID" class='manCard'> 
-    <h2 class='mHeader'> </h2> 
-    <P class='mName'>  </P>
-    <p class="mID"></p>
-    <p class="mEmail"></p>
-    <img src=''> 
-    <p class='mOfficeNum'></p>
+    <h2 class='mHeader'> Team Manager </h2> 
+    <P class='mName'> ${manager.name} </P>
+    <p class="mID"> ${manager.id} </p>
+    <p class="mEmail"> <a href=${manager.email}> Contact Email </a> </p>
+    <p class='mOfficeNum'> ${manager.officeNumber} </p>
 </div>
 </div>
-    <div class="title"> <h2> Team Members </h2>  </div>`
+    <div class="title"> <h2> Team Members </h2>  </div>
+    <div class = "teamContainer">`
 },
 
 addIntern: function addIntern(intern)
 {
 
-  return `<div class = "teamContainer">
+  return `
     <div class='teamCard'> 
-        <h2 class='mHeader'> </h2> 
-        <P class='tName'>  </P>
-        <p class="tID"></p>
-        <p class="tEmail"></p>
-        <img src=''> 
-        <p class='tOther'></p>
+        <h2 class='mHeader'> Intern </h2> 
+        <P class='tName'> ${intern.name}  </P>
+        <p class="tID"> ${intern.id} </p>
+        <p class="tEmail"> ${intern.email}</p>
+        <p class='tOther'><a href="">  ${intern.school} </a> </p>
     </div>`
 
 },
@@ -74,14 +73,13 @@ addIntern: function addIntern(intern)
 addEngineer: function addEngineer(engineer)
 {
 
-return `<div class = "teamContainer">
+return `
     <div class='teamCard'> 
-        <h2 class='mHeader'> </h2> 
-        <P class='tName'>  </P>
-        <p class="tID"></p>
-        <p class="tEmail"></p>
-        <img src=''> 
-        <p class='tOther'></p>
+        <h2 class='mHeader'> Engineer </h2> 
+        <P class='tName'> ${engineer.name} </P>
+        <p class="tID">${engineer.id}</p>
+        <p class="tEmail">${engineer.email}</p>
+        <p class='tOther'>${engineer.userName}</p>
     </div>`
 
 }};

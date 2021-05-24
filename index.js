@@ -121,7 +121,8 @@ function subMenu()
                 break;
                 default:
                 htmlReport += Report.end();
-                writeReport(htmlReport);
+                writeReport("test.html",htmlReport);
+                console.log(htmlReport);
             }
         })
     .catch(error => {
@@ -151,10 +152,27 @@ function engineerMenu()
     .then(answers => 
         {
             const newEngineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
-            htmlReport += Report.addIntern(newEngineer);
+            htmlReport += Report.addEngineer(newEngineer);
             subMenu();
         })
     .catch(error => {
         console.log("error",error);
     });
 }
+
+function writeReport(fileName, data) {
+
+    const filePath = "./dist";
+
+    fs.writeFile(filePath + fileName,data,(error) =>{
+        if (error)
+        {
+            console.log("Error writing file: ", error);
+        }
+        else
+        {
+            console.log(fileName," created successfully")
+        }
+    });
+    
+    }

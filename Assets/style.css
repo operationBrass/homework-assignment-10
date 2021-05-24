@@ -1,11 +1,11 @@
 /* used CSSgridient.io to create favoured background with rotation of the gradient colors to my liking . */
 
 :root{
-    --bodyBackground: linear-gradient(225deg, rgb(16, 171, 238) 44%,rgb(84, 134, 190) 52%);
-    --titleBackground: linear-gradient(225deg, rgb(16, 171, 238) 44%,rgb(84, 134, 190) 52%);
-    --teamBackground: linear-gradient(225deg, rgb(16, 171, 238) 24%,rgb(84, 134, 190) 52%);
+    
+    --teamBackground: linear-gradient(225deg, rgba(234, 238, 16, 0.65) 24%,rgb(190, 123, 84) 52%);
     --headingTextColor: rgba(255, 255, 255, 0.8);
 }
+
 
 .title
 {
@@ -26,7 +26,7 @@ body
 margin:0;
 padding:0;
 max-height: 100%;
-background-color: rgba(0, 0, 0, 0.253);
+background-color: rgba(0, 0, 0, 0.8);
 }
 
 
@@ -45,6 +45,7 @@ background-color: rgba(0, 0, 0, 0.253);
 .teamProfileContainer
 {
     display:flex;
+    flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     
