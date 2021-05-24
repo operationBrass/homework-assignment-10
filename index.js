@@ -121,7 +121,7 @@ function subMenu()
                 break;
                 default:
                 htmlReport += Report.end();
-                writeReport("test.html",htmlReport);
+                writeReport("team_profile.html",htmlReport);
                 console.log(htmlReport);
             }
         })

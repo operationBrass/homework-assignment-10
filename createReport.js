@@ -48,7 +48,7 @@ addManager: function addManager(manager)
     <h2 class='mHeader'> Team Manager </h2> 
     <P class='mName'> Name: ${manager.name} </P>
     <p class="mID"> User ID: ${manager.id} </p>
-    <p class="mEmail"><a href=mailto:${manager.email}> ${manager.email} </a> </p>
+    <p class="mEmail">Email: <a href=mailto:${manager.email}> ${manager.email} </a> </p>
     <p class='mOfficeNum'> Office Number: ${manager.officeNumber} </p>
 </div>
 </div>
@@ -63,7 +63,7 @@ addIntern: function addIntern(intern)
         <h2 class='mHeader'> Intern </h2> 
         <P class='tName'>Name: ${intern.name}  </P>
         <p class="tID"> User ID: ${intern.id} </p>
-        <p class="tEmail"><a href=mailto:${intern.email}> ${intern.email} </a></p>
+        <p class="tEmail">Email: <a href=mailto:${intern.email}> ${intern.email} </a></p>
         <p class='tOther'>School: ${intern.school} </p>
     </div>`
 
@@ -77,7 +77,7 @@ return `
         <h2 class='mHeader'> Engineer </h2> 
         <P class='tName'>Name: ${engineer.name} </P>
         <p class="tID">User ID: ${engineer.id}</p>
-        <p class="tEmail"><a href=mailto:${engineer.email}> ${engineer.email} </a></p>
+        <p class="tEmail">Email: <a href=mailto:${engineer.email}> ${engineer.email} </a></p>
         <p class='tOther'>GitHub: <a href=http://www.github.com/${engineer.userName}> ${engineer.userName} </a></p>
     </div>`
 
