@@ -12,7 +12,6 @@ describe ("Engineer Class", () =>
     });
     test("Return Engineer object when all argurments provided", () => {
       //create a mock Engineer object to test against the returned object from Employee
-
       const testManager = {
         name: "Brendan",
         id: 1,
