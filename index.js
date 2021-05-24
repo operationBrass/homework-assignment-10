@@ -7,6 +7,7 @@ const Report = require("./createReport");
 //node imports
 const inquirer = require('inquirer');
 const fs = require('fs');
+
 //global varibles
 let htmlReport = '';
 
@@ -119,8 +120,8 @@ function subMenu()
                 break;
                 default:
                 htmlReport += Report.end();
-                writeReport("team_profile.html",htmlReport);
-                console.log(htmlReport);
+                writeReport("team_profile_test.html",htmlReport);
+    
             }
         })
     .catch(error => {

@@ -31,7 +31,13 @@ Profile of team members and to bring about all concepts currently learned
 
 ## Installation 
 
-run NPM install in the application directory. Then run node index.js to get going
+With Node installed, open a new BASH terminal in the directory of the app and run NPM Install
+
+ ```NPM Install```
+
+Then just run the Index.JS file to begin the README creation 
+
+```Node Index.js```
 
 
 ## Technologies Used 
@@ -46,6 +52,8 @@ This is currently my own work. Please feel free to submit your contributions on 
 ## Tests 
 
 Run NPM test from within the __TEST__ folder
+
+![Testing](./Assets/testSnip.PNG)
 
 ## Questions 
 
