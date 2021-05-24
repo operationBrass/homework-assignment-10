@@ -7,8 +7,6 @@ const Report = require("./createReport");
 //node imports
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { report } = require("process");
-
 //global varibles
 let htmlReport = '';
 
