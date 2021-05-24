@@ -1,0 +1,89 @@
+/* used CSSgridient.io to create favoured background with rotation of the gradient colors to my liking . */
+
+:root{
+    --bodyBackground: linear-gradient(225deg, rgb(16, 171, 238) 44%,rgb(84, 134, 190) 52%);
+    --titleBackground: linear-gradient(225deg, rgb(16, 171, 238) 44%,rgb(84, 134, 190) 52%);
+    --teamBackground: linear-gradient(225deg, rgb(16, 171, 238) 24%,rgb(84, 134, 190) 52%);
+    --headingTextColor: rgba(255, 255, 255, 0.8);
+}
+
+.title
+{
+
+    background: var(--titleBackground);
+    color:var(--headingTextColor);
+
+}
+
+html
+{
+height: 100vh;
+}
+
+body
+{
+
+margin:0;
+padding:0;
+max-height: 100%;
+background-color: rgba(0, 0, 0, 0.253);
+}
+
+
+
+.container 
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.teamProfileContainer
+{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+
+.teamContainer
+{
+    display:flex;
+    flex-wrap: wrap-reverse;
+    width:100%;
+   
+   
+}
+
+/*manager card style*/
+#manID
+{
+    min-width: 360px;
+}
+
+.manCard,.teamCard
+{
+    background: var(--teamBackground);
+    color: rgba(255, 255, 255, 0.685);
+    margin: auto;
+    border:darkblue 1px solid;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+
+.mHeader
+{
+  margin: 0.5em;
+}
+
+h1
+{
+    font-size: 30px;
+}

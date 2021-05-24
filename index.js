@@ -2,35 +2,16 @@
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
+const Report = require("./createReport");
 
 //node imports
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
-
 //global varibles
-let objArray = new Array();
+const objArray = [];
 
-//create a NEW manager
-function generateManager(name, id, email, officeNum) 
-{
-    objArray.push(new Manager(name, id, email, officeNum));
-}
-
-//create NEW engineer
-
-function genEng(name, id, email, gitUser) {
-    objArray.push(new Engineer(name, id, email, gitUser));
-}
-
-//create a NEW intern
-function genIntern(name, id, email, school) {
-    objArray.push(new Intern(name, id, email, gitUser));
-}
-
-
-// hold list of questions as array of objects and make available to index.js module
+// hold list of questions as array of objects
 
 const managerQ = 
 [{
@@ -136,11 +117,12 @@ function subMenu()
                 engineerMenu();
                 break;
                 default:
-                console.log("exit");
+                Report(answers)
+                console.log(objArray);
             }
         })
     .catch(error => {
-        console.log("error");
+        console.log("error",error);
     });
 
 }
@@ -156,7 +138,7 @@ function internMenu()
     })
     .catch(error => 
     {
-        console.log("error");
+        console.log("error",error);
     });
 }
 function engineerMenu()
@@ -164,10 +146,10 @@ function engineerMenu()
     inquirer.prompt(engineerQ)
     .then(answers => 
         {
-            objArray.push(new Engineer(answers.name, answers.id, answers.email, answers.gitUser));
+            objArray.push(new Engineer(answers.name, answers.id, answers.email, answers.github));
             subMenu();
         })
     .catch(error => {
-        console.log("error");
+        console.log("error",error);
     });
 }
